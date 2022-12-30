@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" background="/blue-abstract-background-images-hd.jpg">
 
 <head>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
     <title>conform Payment</title>
 </head>
 
-<body class="name" background="/blue-abstract-background-images-hd.jpg">
+<body class="name"  background-color = "blue">
     <section class="content content_content" style="width: 70%; margin: auto;margin-top: 16%;">
         <section class="invoice">
             <!-- title row -->
@@ -29,7 +29,7 @@
             <!-- info row -->
 
             <p
-               id="rp" style="margin-left: 28%;color: white;text-decoration: black;font-weight: lighter;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+               id="rp" style="margin-left: 28%;color: black; text-decoration: black;font-weight: lighter;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
                 Do you want to make this transaction a success </p>
             </div>
             </div><!-- /.col -->
@@ -65,7 +65,7 @@
                     "Content-type": "application/json; charset=UTF-8"
                 }
             }).then(res => {
-                window.location.replace("index.html" );
+                window.location.replace("success.html" );
             })
             .catch(e => {
                 alert(e.message);
