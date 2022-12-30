@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<title>Shopping  UI</title>
+	<link rel="stylesheet" type="text/css" href="./style23.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+</head>
+
+<body>
+	<div class="CartContainer">
+		<div class="Header">
+			<h3 class="Heading">Shopping Cart</h3>
+
+		</div>
+
+		<div class="Cart-Items">
+			<div class="image-box">
+				<img src="" id="image" style={{ height="120px" }} />
+			</div>
+			<div class="about">
+				<h1 id="title">Loading..</h1>
+				<h3 id="subteitl">Loading..</h3>
+				<h3><span id="subte">
+
+						
+					</span> - items in stock</h3>
+
+			</div>
+
+			<div class="prices">
+				<div id="amount">Rs0</div>
+
+
+			</div>
+		</div>
+
+
+		<hr>
+		<div class="checkout">
+			<div class="total">
+				<div>
+					<div class="Subtotal">Sub-Total</div>
+					<div><span id="items">1</span>-Items</div>
+				</div>
+				<div id="total-amount"><span id="deno">Rs </span></div>
+			</div>
+			<!-- <button class="button"><a href=bill.html style="text-decoration: none;color: black;">checkout</a></button> -->
+			<button id="button" onclick="checkoutItem()">Checkout</button>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+	<script>
+		function checkoutItem() {
+			const url_string = window.location.href;
+            const url = new URL(url_string);
+			const itemId = url.searchParams.get("itemId");
+			window.location.replace("bill.html?itemId=" +itemId );
+		}
+	
+	</script>
+</body>
+
+</html>

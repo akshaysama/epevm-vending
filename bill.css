@@ -1,0 +1,38 @@
+.invoice {
+    position: relative;
+    
+    border: 2px solid #0c0a0a;
+    padding: 20px;
+    margin: 10px 25px;
+}
+.page-header {
+    margin: 10px 0 20px 0;
+    font-size: 22px;
+}
+.content content_content{
+    width: 70%; margin: auto;margin-top: 16%;
+}
+@media only screen and (max-width: 560px) {
+    .invoice{
+        width: 140%;
+        box-sizing: calc(10%);
+        margin-top: 70%;
+        margin-left: -20%;
+        height: -20%;
+        display: flex;
+        flex-shrink: 40%;
+        flex-direction: column;
+        padding-right: 30%;
+       
+       
+    }
+    .name{ background-image: url(/edited/blue-abstract-background-images-hd.jpg)  }
+    h2{
+        color: black;
+    }
+    .rp{
+    color: black;
+    }
+    
+  
+}

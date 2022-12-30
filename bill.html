@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bill.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conform Payment</title>
+</head>
+
+<body class="name" background="/blue-abstract-background-images-hd.jpg">
+    <section class="content content_content" style="width: 70%; margin: auto;margin-top: 16%;">
+        <section class="invoice">
+            <!-- title row -->
+            <div class="row">
+                <div class="col-xs-12" style="margin-left: 40%;">
+                    <h2 class="page-header" style="color: coral;">
+                        EP EVM Co.
+
+                    </h2>
+                </div><!-- /.col -->
+            </div>
+            <!-- info row -->
+
+            <p
+               id="rp" style="margin-left: 28%;color: white;text-decoration: black;font-weight: lighter;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Do you want to make this transaction a success </p>
+            </div>
+            </div><!-- /.col -->
+            </div><!-- /.row -->
+
+            <!-- this row will not appear when printing -->
+            <div class="row no-print" style="padding-left: 37%;">
+                <div class="col-xs-12">
+
+                    <button onclick="handleClick()" class="btn btn-success pull-right" style="margin-right: 5px;"><a
+                            class=" text-white">ACCEPT</a></button>
+                    <button class="btn btn-danger pull-right" style="margin-right: 5px;"><a class=" text-white"
+                            href="index.html">DECLINE</a></button>
+                </div>
+            </div>
+
+        </section>
+    </section>
+    <script>    
+
+        function handleClick() {
+            const baseURL = 'https://epevm.onrender.com/api'
+
+            const url_string = window.location.href;
+            const url = new URL(url_string);
+            const itemId = url.searchParams.get("itemId");
+            const product =  fetch(`${baseURL}/checkout/`, {
+                method: "POST",
+                body: JSON.stringify({
+                    productId: itemId
+                }),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
+            }).then(res => {
+                window.location.replace("index.html" );
+            })
+            .catch(e => {
+                alert(e.message);
+            });
+        }
+    </script>
+</body>
+
+</html>
