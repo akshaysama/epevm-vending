@@ -8,12 +8,30 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href = success.css>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.1/lottie.min.js" integrity="sha512-H6aKTjvYAazW0iNuGj1f2dZvSWlt1HGZGEDsXRPETo2IB4H6v36Vl2qiZNlCRxOp0kT7iBf+7USNPavNscZGAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+    <div>
     <svg class="spinner" viewBox="0 0 50 50">
         <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
       </svg>
+    </div>
+   
+     
+      <div class="processing">Please wait processing payment ...</div>
       <div class="container">
+        <div id="payment"></div>
+        <script>
+            var animation = bodymovin.loadAnimation({
+            // animationData: { /* ... */ },
+            container: document.getElementById('payment'), // required
+            path: 'payment.json', // required
+            renderer: 'svg', // required
+            loop: true, // optional
+            autoplay: true, // optional
+            name: "Demo Animation", // optional
+          });
+        </script>
       <div id="text"></div>
       <div id="button"></div>
     </div>

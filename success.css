@@ -6,6 +6,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
   }
   
   .spinner {
@@ -29,6 +30,7 @@ html, body {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
         flex-direction: column;
     }
     .continue a {
@@ -41,7 +43,38 @@ html, body {
         font-weight: 700;
         color: aliceblue;
     }
-  
+    .processing{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      color: aliceblue;
+      padding-top:100px ;
+    }
+  #payment{
+    display: none;
+    max-height: 500px;
+    max-width: 500px;
+    position: absolute;
+    top: -275px;
+  }
+  @media screen and (max-width:380px) {
+    #payment{
+      display: none;
+      max-height: 500px;
+      max-width: 500px;
+      position: absolute;
+      top: -209px;
+    }
+  }
+  @media screen and (min-width:380px) and( max-width:500px) {
+    #payment{
+      display: none;
+      max-height: 500px;
+      max-width: 500px;
+      position: absolute;
+      top: -240px;
+    }
+  }
   @keyframes rotate {
     100% {
       transform: rotate(360deg);
