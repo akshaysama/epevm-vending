@@ -9,7 +9,7 @@ const removeLoading = ()=>{
     loading.remove()
     Processing.remove()
     payment.style.display = 'block'
-    SuccessText.innerHTML='Your transaction is successful please collect the item'
+    SuccessText.innerHTML='Your transaction is successful, please collect the item'
     button.innerHTML = `<button  class="btn btn-success pull-right continue" style="margin-right: 5px; margin-top: 8px;"><a
     class=" text-white"><a href = 'index.html'>Continue Shopping</a></button>`
 
